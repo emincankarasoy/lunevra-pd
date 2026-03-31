@@ -14,6 +14,7 @@ export interface Perfume {
   scentFamily: ScentFamily;
   productUrl: string;
   priveeProductUrl: string | null;
+  featured?: boolean;
 }
 
 export const perfumes: Perfume[] = [
@@ -31,17 +32,17 @@ export const perfumes: Perfume[] = [
   { id: 11, essentielleName: "Paragon", priveeName: "L'Impérial", similarTo: "Aventus", similarBrand: "Creed", gender: "erkek", season: "ilkbahar-yaz", scentFamily: "meyveli", productUrl: "https://lunevra.com.tr/paragon-eau-de-parfum", priveeProductUrl: "https://lunevra.com.tr/l-imperial-eau-de-parfum" },
   { id: 12, essentielleName: "Grande", priveeName: "Monsieur Élégant", similarTo: "Gentleman", similarBrand: "Givenchy", gender: "erkek", season: "tum-mevsimler", scentFamily: "odunsu", productUrl: "https://lunevra.com.tr/grande-eau-de-parfum", priveeProductUrl: "https://lunevra.com.tr/monsieur-elegant-eau-de-parfum" },
   { id: 13, essentielleName: "Piquant", priveeName: "Élixir Vanillé", similarTo: "Tobacco Vanille", similarBrand: "Tom Ford", gender: "erkek", season: "sonbahar-kis", scentFamily: "tatli", productUrl: "https://lunevra.com.tr/piquant-eau-de-parfum", priveeProductUrl: "https://lunevra.com.tr/elixir-vanille-eau-de-parfum" },
-  { id: 14, essentielleName: "Magnate", priveeName: null, similarTo: "Imagination", similarBrand: "Louis Vuitton", gender: "erkek", season: "ilkbahar-yaz", scentFamily: "taze", productUrl: "https://lunevra.com.tr/magnate-eau-de-parfum", priveeProductUrl: null },
+  { id: 14, essentielleName: "Magnate", priveeName: null, similarTo: "Imagination", similarBrand: "Louis Vuitton", gender: "erkek", season: "ilkbahar-yaz", scentFamily: "taze", productUrl: "https://lunevra.com.tr/magnate-eau-de-parfum", priveeProductUrl: null, featured: true },
   { id: 15, essentielleName: "Verdant", priveeName: null, similarTo: "Torino 21", similarBrand: "Xerjoff", gender: "erkek", season: "ilkbahar-yaz", scentFamily: "taze", productUrl: "https://lunevra.com.tr/verdant-eau-de-parfum", priveeProductUrl: null },
-  { id: 16, essentielleName: "Arcane", priveeName: null, similarTo: "Le Beau Le Parfum", similarBrand: "Jean Paul Gaultier", gender: "erkek", season: "ilkbahar-yaz", scentFamily: "tatli", productUrl: "https://lunevra.com.tr/arcane-eau-de-parfum", priveeProductUrl: null },
+  { id: 16, essentielleName: "Arcane", priveeName: null, similarTo: "Le Beau Le Parfum", similarBrand: "Jean Paul Gaultier", gender: "erkek", season: "ilkbahar-yaz", scentFamily: "tatli", productUrl: "https://lunevra.com.tr/arcane-eau-de-parfum", priveeProductUrl: null, featured: true },
   { id: 17, essentielleName: "Regnant", priveeName: null, similarTo: "Bois Imperial", similarBrand: "Essential Parfums", gender: "erkek", season: "tum-mevsimler", scentFamily: "odunsu", productUrl: "https://lunevra.com.tr/regnant-eau-de-parfum", priveeProductUrl: null },
 
   // ---- KADIN ----
   { id: 24, essentielleName: "Sublime", priveeName: null, similarTo: "Erba Pura", similarBrand: "Xerjoff", gender: "kadin", season: "ilkbahar-yaz", scentFamily: "meyveli", productUrl: "https://lunevra.com.tr/sublime-eau-de-parfum", priveeProductUrl: null },
   { id: 30, essentielleName: "Radiant", priveeName: "Charme Absolu", similarTo: "Goddess", similarBrand: "Burberry", gender: "kadin", season: "sonbahar-kis", scentFamily: "tatli", productUrl: "https://lunevra.com.tr/radiant-eau-de-parfum", priveeProductUrl: "https://lunevra.com.tr/charme-absolu-eau-de-parfum" },
-  { id: 25, essentielleName: "Candour", priveeName: null, similarTo: "My Way", similarBrand: "Giorgio Armani", gender: "kadin", season: "ilkbahar-yaz", scentFamily: "ciceksi", productUrl: "https://lunevra.com.tr/candour-eau-de-parfum", priveeProductUrl: null },
+  { id: 25, essentielleName: "Candour", priveeName: null, similarTo: "My Way", similarBrand: "Giorgio Armani", gender: "kadin", season: "ilkbahar-yaz", scentFamily: "ciceksi", productUrl: "https://lunevra.com.tr/candour-eau-de-parfum", priveeProductUrl: null, featured: true },
   { id: 31, essentielleName: "Nomadic", priveeName: "Libre Lumière", similarTo: "Libre", similarBrand: "Yves Saint Laurent", gender: "kadin", season: "tum-mevsimler", scentFamily: "ciceksi", productUrl: "https://lunevra.com.tr/nomadic-eau-de-parfum", priveeProductUrl: "https://lunevra.com.tr/libre-lumiere-eau-de-parfum" },
-  { id: 26, essentielleName: "Elysian", priveeName: null, similarTo: "Fleur Narcotique", similarBrand: "Ex Nihilo", gender: "kadin", season: "ilkbahar-yaz", scentFamily: "ciceksi", productUrl: "https://lunevra.com.tr/elysian-eau-de-parfum", priveeProductUrl: null },
+  { id: 26, essentielleName: "Elysian", priveeName: null, similarTo: "Fleur Narcotique", similarBrand: "Ex Nihilo", gender: "kadin", season: "ilkbahar-yaz", scentFamily: "ciceksi", productUrl: "https://lunevra.com.tr/elysian-eau-de-parfum", priveeProductUrl: null, featured: true },
   { id: 32, essentielleName: "Pristine", priveeName: "Muse Intemporelle", similarTo: "Coco Mademoiselle", similarBrand: "Chanel", gender: "kadin", season: "tum-mevsimler", scentFamily: "ciceksi", productUrl: "https://lunevra.com.tr/pristine-eau-de-parfum", priveeProductUrl: "https://lunevra.com.tr/muse-intemporelle-eau-de-parfum" },
   { id: 27, essentielleName: "Amoret", priveeName: null, similarTo: "Bombshell", similarBrand: "Victoria's Secret", gender: "kadin", season: "ilkbahar-yaz", scentFamily: "meyveli", productUrl: "https://lunevra.com.tr/amoret-eau-de-parfum", priveeProductUrl: null },
   { id: 33, essentielleName: "Melliflu", priveeName: "Caramel Blanc", similarTo: "Eclaire", similarBrand: "Lattafa", gender: "kadin", season: "sonbahar-kis", scentFamily: "tatli", productUrl: "https://lunevra.com.tr/melliflu-eau-de-parfum", priveeProductUrl: "https://lunevra.com.tr/caramel-blanc-eau-de-parfum" },
@@ -65,7 +66,7 @@ export function filterPerfumes(
   season: Season | null,
   scentFamily: ScentFamily | null,
 ): Perfume[] {
-  return perfumes.filter((p) => {
+  const filtered = perfumes.filter((p) => {
     if (collection === "privee" && !p.priveeName) return false;
     if (gender) {
       const genderMatch = p.gender === gender || p.gender === "unisex";
@@ -75,4 +76,5 @@ export function filterPerfumes(
     if (scentFamily && p.scentFamily !== scentFamily) return false;
     return true;
   });
+  return filtered.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
 }

@@ -2,6 +2,8 @@ import type { Perfume, Collection } from "./data";
 
 const ARROW_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>`;
 
+const STAR_ICON = `<svg class="star-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`;
+
 const GENDER_ICON: Record<string, string> = {
   erkek: `<svg class="gender-icon erkek" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="5"/><path d="M19 5l-4.5 4.5M19 5h-5M19 5v5"/></svg>`,
   kadin: `<svg class="gender-icon kadin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/></svg>`,
@@ -39,11 +41,12 @@ export function renderTable(perfumes: Perfume[], collection: Collection, page: n
   const rows = paged
     .map((p) => {
       const displayName = collection === "privee" ? (p.priveeName ?? p.essentielleName) : p.essentielleName;
-      const productUrl = collection === "privee" && p.priveeProductUrl ? p.priveeProductUrl : p.productUrl;
+      const starBadge = p.featured ? STAR_ICON : "";
+      // const productUrl = collection === "privee" && p.priveeProductUrl ? p.priveeProductUrl : p.productUrl;
       return `
-    <tr>
-      <td data-label="Parfüm">
-        <div class="perfume-name">${escapeHtml(displayName)}</div>
+    <tr${p.featured ? ' class="featured-row"' : ""}>
+      <td data-label="Parf\u00fcm">
+        <div class="perfume-name">${starBadge}${escapeHtml(displayName)}</div>
       </td>
       <td data-label="Benzer Koku">
         <div class="similar-cell">
