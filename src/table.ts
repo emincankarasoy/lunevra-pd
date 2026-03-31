@@ -39,6 +39,7 @@ export function renderTable(perfumes: Perfume[], collection: Collection, page: n
   const rows = paged
     .map((p) => {
       const displayName = collection === "privee" ? (p.priveeName ?? p.essentielleName) : p.essentielleName;
+      const productUrl = collection === "privee" && p.priveeProductUrl ? p.priveeProductUrl : p.productUrl;
       return `
     <tr>
       <td data-label="Parfüm">
@@ -54,7 +55,7 @@ export function renderTable(perfumes: Perfume[], collection: Collection, page: n
         <span class="perfume-tags">${collectionBadge(collection)}${GENDER_ICON[p.gender]}</span>
       </td>
       <td>
-        <a class="product-link" href="${escapeHtml(p.productUrl)}" target="_top" rel="noopener">
+        <a class="product-link" href="${escapeHtml(productUrl)}" target="_top" rel="noopener">
           İncele ${ARROW_ICON}
         </a>
       </td>
