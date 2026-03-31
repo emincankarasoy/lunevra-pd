@@ -14,13 +14,10 @@ function escapeHtml(text: string): string {
   return el.innerHTML;
 }
 
-function collectionBadges(p: Perfume): string {
-  const badges: string[] = [];
-  badges.push(`<span class="col-dot essentielle" title="Essentielle">E</span>`);
-  if (p.priveeName) {
-    badges.push(`<span class="col-dot privee" title="Privée">P</span>`);
-  }
-  return badges.join("");
+function collectionBadge(collection: Collection): string {
+  return collection === "privee"
+    ? `<span class="col-dot privee" title="Privée">P</span>`
+    : `<span class="col-dot essentielle" title="Essentielle">E</span>`;
 }
 
 export function renderTable(perfumes: Perfume[], collection: Collection, page: number, perPage: number): string {
@@ -47,7 +44,7 @@ export function renderTable(perfumes: Perfume[], collection: Collection, page: n
       <td>
         <div class="perfume-name-row">
           <span class="perfume-name">${escapeHtml(displayName)}</span>
-          <span class="perfume-tags">${collectionBadges(p)}${GENDER_ICON[p.gender]}</span>
+          <span class="perfume-tags">${collectionBadge(collection)}${GENDER_ICON[p.gender]}</span>
         </div>
       </td>
       <td>
