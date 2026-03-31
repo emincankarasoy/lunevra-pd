@@ -576,6 +576,15 @@ body {
     content: ' · ';
   }
 
+  .brand-name {
+    display: inline;
+    margin-top: 0;
+  }
+
+  .similar-scent {
+    display: inline;
+  }
+
   .similar-cell {
     text-align: right;
   }
