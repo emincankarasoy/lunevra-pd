@@ -41,7 +41,7 @@ export function renderTable(perfumes: Perfume[], collection: Collection, page: n
       const displayName = collection === "privee" ? (p.priveeName ?? p.essentielleName) : p.essentielleName;
       return `
     <tr>
-      <td data-label="Lunévra Parfüm">
+      <td data-label="Parfüm">
         <div class="perfume-name">${escapeHtml(displayName)}</div>
       </td>
       <td data-label="Benzer Koku">
@@ -69,7 +69,7 @@ export function renderTable(perfumes: Perfume[], collection: Collection, page: n
       <table class="perfume-table">
         <thead>
           <tr>
-            <th>Lunévra Parfüm</th>
+            <th>Parfüm</th>
             <th>Benzer Koku</th>
             <th>Detay</th>
             <th></th>
