@@ -278,7 +278,7 @@ body {
 .perfume-tags {
   display: inline-flex;
   align-items: center;
-  gap: 3px;
+  gap: 5px;
   flex-shrink: 0;
 }
 
@@ -303,9 +303,9 @@ body {
 }
 
 .gender-icon {
-  width: 20px;
+  width: 16px;
   height: 20px;
-  vertical-align: middle;
+  display: block;
 }
 
 .gender-icon.erkek {
