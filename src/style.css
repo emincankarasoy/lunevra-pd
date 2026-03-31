@@ -32,7 +32,7 @@ body {
 #app {
   max-width: 100%;
   margin: 0;
-  padding: 12px 0;
+  padding: 8px 0;
 }
 
 /* ========== HEADER ========== */
@@ -62,7 +62,7 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .collection-toggle {
@@ -110,7 +110,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .filter-group {
@@ -157,13 +157,13 @@ body {
 
 /* ========== SEARCH ========== */
 .search-container {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   position: relative;
 }
 
 .search-input {
   width: 100%;
-  padding: 11px 16px 11px 42px;
+  padding: 9px 16px 9px 42px;
   font-family: var(--font-body);
   font-size: 0.875rem;
   border: 1px solid var(--color-border);
@@ -211,7 +211,7 @@ body {
 }
 
 .perfume-table th {
-  padding: 12px 20px;
+  padding: 10px 20px;
   text-align: left;
   font-weight: 500;
   font-size: 0.7rem;
@@ -223,7 +223,7 @@ body {
 }
 
 .perfume-table td {
-  padding: 12px 20px;
+  padding: 10px 20px;
   border-bottom: 1px solid var(--color-border);
   vertical-align: middle;
 }
@@ -403,7 +403,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 4px;
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
 .page-btn {
