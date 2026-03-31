@@ -70,7 +70,7 @@ function render() {
     : "";
 
   const collectionDesc = activeCollection === "essentielle"
-    ? "İkonik kokuların Lunévra yorumu. Aynı koku ailesinden, özgün formüllerle."
+    ? "Sevdiğiniz parfümlerden ilham alan, her gün keyifle kullanabileceğiniz koleksiyon."
     : "Premium içeriklerle hazırlanan özel koleksiyon. Orijinaline en yakın deneyim.";
 
   app.innerHTML = `
