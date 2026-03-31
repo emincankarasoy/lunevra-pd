@@ -70,15 +70,17 @@ function render() {
     : "";
 
   const collectionDesc = activeCollection === "essentielle"
-    ? "Sevdiğiniz parfümlerin uygun fiyatlı muadilleri. Günlük kullanım için ideal."
+    ? "İkonik kokuların Lunévra yorumu. Aynı koku ailesinden, özgün formüllerle."
     : "Premium içeriklerle hazırlanan özel koleksiyon. Orijinaline en yakın deneyim.";
 
   app.innerHTML = `
-    <div class="collection-toggle">
-      <button class="collection-btn${activeCollection === "essentielle" ? " active" : ""}" data-col="essentielle">Essentielle</button>
-      <button class="collection-btn${activeCollection === "privee" ? " active" : ""}" data-col="privee">Privée</button>
+    <div class="collection-header">
+      <div class="collection-toggle">
+        <button class="collection-btn${activeCollection === "essentielle" ? " active" : ""}" data-col="essentielle">Essentielle</button>
+        <button class="collection-btn${activeCollection === "privee" ? " active" : ""}" data-col="privee">Privée</button>
+      </div>
+      <p class="collection-desc">${collectionDesc}</p>
     </div>
-    <p class="collection-desc">${collectionDesc}</p>
 
     <div class="filters">
       ${renderFilterGroup("Cinsiyet", genderOptions, activeGender, "gender")}

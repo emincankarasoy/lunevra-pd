@@ -58,15 +58,21 @@ body {
 }
 
 /* ========== COLLECTION TOGGLE ========== */
+.collection-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
 .collection-toggle {
   display: flex;
   gap: 0;
-  margin-bottom: 6px;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 3px;
-  width: fit-content;
+  flex-shrink: 0;
 }
 
 .collection-btn {
@@ -96,7 +102,6 @@ body {
 .collection-desc {
   font-size: 0.78rem;
   color: var(--color-text-secondary);
-  margin-bottom: 14px;
   line-height: 1.4;
 }
 
