@@ -444,13 +444,24 @@ body {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
+  #app {
+    padding: 12px 16px;
+  }
+
+  .collection-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
   .collection-btn {
     padding: 7px 16px;
     font-size: 0.78rem;
   }
 
   .filters {
-    gap: 8px;
+    gap: 10px;
+    flex-direction: column;
   }
 
   .filter-group {
@@ -482,6 +493,30 @@ body {
 }
 
 @media (max-width: 480px) {
+  #app {
+    padding: 10px 14px;
+  }
+
+  .collection-desc {
+    font-size: 0.72rem;
+  }
+
+  .filter-label {
+    font-size: 0.65rem;
+    width: 100%;
+    margin-bottom: 2px;
+  }
+
+  .filter-group {
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .filter-chip {
+    padding: 5px 10px;
+    font-size: 0.7rem;
+  }
+
   .perfume-table thead {
     display: none;
   }
@@ -495,13 +530,17 @@ body {
   }
 
   .perfume-table tr {
-    padding: 14px;
+    padding: 14px 0;
     border-bottom: 1px solid var(--color-border);
   }
 
   .perfume-table td {
     padding: 2px 0;
     border-bottom: none;
+  }
+
+  .perfume-table td:nth-child(3) {
+    margin-top: 8px;
   }
 
   .perfume-table td:last-child {
@@ -533,5 +572,15 @@ body {
   .table-wrapper {
     border: none;
     border-radius: 0;
+  }
+
+  .col-badge {
+    font-size: 0.62rem;
+    padding: 2px 7px;
+  }
+
+  .gender-icon {
+    width: 18px;
+    height: 18px;
   }
 }
