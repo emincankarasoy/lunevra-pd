@@ -1,0 +1,264 @@
+/* ========== RESET & BASE ========== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #f8f8f8;
+  --color-border: #e5e5e5;
+  --color-text: #1a1a1a;
+  --color-text-secondary: #666666;
+  --color-accent: #1a1a1a;
+  --color-accent-hover: #333333;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --transition: 0.2s ease;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+/* ========== HEADER ========== */
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.header__title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.header__subtitle {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+/* ========== SEARCH ========== */
+.search-container {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px 12px 44px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.search-input::placeholder {
+  color: #ababab;
+}
+
+.search-input:focus {
+  border-color: var(--color-accent);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #ababab;
+  pointer-events: none;
+}
+
+/* ========== TABLE ========== */
+.table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+}
+
+.perfume-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.perfume-table thead {
+  background: var(--color-surface);
+}
+
+.perfume-table th {
+  padding: 14px 20px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.perfume-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.perfume-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.perfume-table tbody tr {
+  transition: background var(--transition);
+}
+
+.perfume-table tbody tr:hover {
+  background: var(--color-surface);
+}
+
+/* Column widths */
+.perfume-table th:nth-child(1),
+.perfume-table td:nth-child(1) {
+  width: 38%;
+}
+
+.perfume-table th:nth-child(2),
+.perfume-table td:nth-child(2) {
+  width: 42%;
+}
+
+.perfume-table th:nth-child(3),
+.perfume-table td:nth-child(3) {
+  width: 20%;
+  text-align: center;
+}
+
+/* Cell styles */
+.perfume-name {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.brand-name {
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.similar-scent {
+  color: var(--color-text);
+}
+
+.scent-notes {
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.price {
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.product-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-bg);
+  background: var(--color-accent);
+  padding: 7px 18px;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background var(--transition);
+  white-space: nowrap;
+}
+
+.product-link:hover {
+  background: var(--color-accent-hover);
+}
+
+.product-link svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+/* ========== EMPTY STATE ========== */
+.empty-state {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--color-text-secondary);
+}
+
+.empty-state__icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  color: #ccc;
+}
+
+.empty-state__text {
+  font-size: 0.875rem;
+}
+
+/* ========== RESULT COUNT ========== */
+.result-count {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 640px) {
+  #app {
+    padding: 20px 12px;
+  }
+
+  .header__title {
+    font-size: 1.4rem;
+  }
+
+  .perfume-table th,
+  .perfume-table td {
+    padding: 10px 12px;
+  }
+
+  .perfume-table {
+    font-size: 0.8rem;
+  }
+
+  .product-link {
+    font-size: 0.7rem;
+    padding: 5px 12px;
+  }
+}
