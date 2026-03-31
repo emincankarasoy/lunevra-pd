@@ -5,7 +5,7 @@ const ARROW_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
 const GENDER_ICON: Record<string, string> = {
   erkek: `<svg class="gender-icon erkek" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="5"/><path d="M19 5l-4.5 4.5M19 5h-5M19 5v5"/></svg>`,
   kadin: `<svg class="gender-icon kadin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/></svg>`,
-  unisex: `<svg class="gender-icon unisex" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 7V2M15 3l-3 4-3-4M12 17v5M9 21l3-4 3 4"/></svg>`,
+  unisex: `<svg class="gender-icon unisex" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="11" r="5"/><path d="M16 7l3-3M19 4h-4M19 4v4"/><path d="M12 16v5M9 18.5h6"/></svg>`,
 };
 
 function escapeHtml(text: string): string {
