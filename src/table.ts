@@ -3,9 +3,9 @@ import type { Perfume, Collection } from "./data";
 const ARROW_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>`;
 
 const GENDER_ICON: Record<string, string> = {
-  erkek: `<svg class="gender-icon erkek" viewBox="0 0 16 20" fill="currentColor"><circle cx="8" cy="3" r="3"/><rect x="3" y="8" width="10" height="2" rx="1"/><rect x="6" y="8" width="2" height="11" rx="1"/><rect x="3" y="8" width="2" height="6" rx="1"/><rect x="11" y="8" width="2" height="6" rx="1"/></svg>`,
-  kadin: `<svg class="gender-icon kadin" viewBox="0 0 16 20" fill="currentColor"><circle cx="8" cy="3" r="3"/><path d="M3 8h10l-2 8H5L3 8z"/><rect x="6" y="15" width="2" height="4" rx="1"/><rect x="9" y="15" width="2" height="4" rx="1"/></svg>`,
-  unisex: `<svg class="gender-icon unisex" viewBox="0 0 30 20" fill="currentColor"><circle cx="8" cy="3" r="3"/><rect x="3" y="8" width="10" height="2" rx="1"/><rect x="6" y="8" width="2" height="11" rx="1"/><rect x="3" y="8" width="2" height="6" rx="1"/><rect x="11" y="8" width="2" height="6" rx="1"/><circle cx="22" cy="3" r="3"/><path d="M17 8h10l-2 8h-6l-2-8z"/><rect x="20" y="15" width="2" height="4" rx="1"/><rect x="23" y="15" width="2" height="4" rx="1"/></svg>`,
+  erkek: `<svg class="gender-icon erkek" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="5"/><path d="M19 5l-4.5 4.5M19 5h-5M19 5v5"/></svg>`,
+  kadin: `<svg class="gender-icon kadin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/></svg>`,
+  unisex: `<svg class="gender-icon unisex" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 7V2M15 3l-3 4-3-4M12 17v5M9 21l3-4 3 4"/></svg>`,
 };
 
 function escapeHtml(text: string): string {

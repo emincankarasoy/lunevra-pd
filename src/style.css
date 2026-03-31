@@ -303,9 +303,9 @@ body {
 }
 
 .gender-icon {
-  width: 16px;
+  width: 20px;
   height: 20px;
-  display: block;
+  vertical-align: middle;
 }
 
 .gender-icon.erkek {
