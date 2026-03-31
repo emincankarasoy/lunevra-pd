@@ -365,6 +365,12 @@ body {
   background: var(--color-accent-hover);
 }
 
+.product-link.disabled {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+
 .product-link svg {
   width: 12px;
   height: 12px;
