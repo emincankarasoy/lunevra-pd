@@ -45,8 +45,10 @@ export function renderTable(perfumes: Perfume[], collection: Collection, page: n
         <div class="perfume-name">${escapeHtml(displayName)}</div>
       </td>
       <td data-label="Benzer Koku">
-        <div class="similar-scent">${escapeHtml(p.similarTo)}</div>
-        <div class="brand-name">${escapeHtml(p.similarBrand)}</div>
+        <div class="similar-cell">
+          <span class="similar-scent">${escapeHtml(p.similarTo)}</span>
+          <span class="brand-name">${escapeHtml(p.similarBrand)}</span>
+        </div>
       </td>
       <td data-label="Detay">
         <span class="perfume-tags">${collectionBadge(collection)}${GENDER_ICON[p.gender]}</span>

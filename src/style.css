@@ -321,6 +321,7 @@ body {
 }
 
 .brand-name {
+  display: block;
   font-size: 0.7rem;
   color: var(--color-text-secondary);
   margin-top: 2px;
@@ -571,16 +572,12 @@ body {
     display: none;
   }
 
-  .brand-name {
-    display: inline;
-  }
-
   .brand-name::before {
     content: ' · ';
   }
 
-  .similar-scent {
-    display: inline;
+  .similar-cell {
+    text-align: right;
   }
 
   .perfume-name {
