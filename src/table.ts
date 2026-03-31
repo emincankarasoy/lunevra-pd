@@ -3,9 +3,9 @@ import type { Perfume, Collection } from "./data";
 const ARROW_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>`;
 
 const GENDER_ICON: Record<string, string> = {
-  erkek: `<span class="gender-icon erkek" title="Erkek">♂</span>`,
-  kadin: `<span class="gender-icon kadin" title="Kadın">♀</span>`,
-  unisex: `<span class="gender-icon unisex" title="Unisex">♂♀</span>`,
+  erkek: `<svg class="gender-icon erkek" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="5"/><path d="M19 5l-4.5 4.5M19 5h-5M19 5v5"/></svg>`,
+  kadin: `<svg class="gender-icon kadin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/></svg>`,
+  unisex: `<svg class="gender-icon unisex" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 7V2M15 3l-3 4-3-4M12 17v5M9 21l3-4 3 4"/></svg>`,
 };
 
 function escapeHtml(text: string): string {
@@ -16,8 +16,8 @@ function escapeHtml(text: string): string {
 
 function collectionBadge(collection: Collection): string {
   return collection === "privee"
-    ? `<span class="col-dot privee" title="Privée">P</span>`
-    : `<span class="col-dot essentielle" title="Essentielle">E</span>`;
+    ? `<span class="col-badge privee">Privée</span>`
+    : `<span class="col-badge essentielle">Essentielle</span>`;
 }
 
 export function renderTable(perfumes: Perfume[], collection: Collection, page: number, perPage: number): string {
@@ -68,8 +68,8 @@ export function renderTable(perfumes: Perfume[], collection: Collection, page: n
         <thead>
           <tr>
             <th>Lunévra Parfüm</th>
-            <th>Benzer Koku</th>
-            <th></th>
+            <th>İlham Kaynağı</th>
+            <th>Detay</th>
             <th></th>
           </tr>
         </thead>

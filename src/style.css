@@ -282,31 +282,30 @@ body {
   flex-shrink: 0;
 }
 
-.col-dot {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  font-size: 0.55rem;
-  font-weight: 700;
-  line-height: 1;
+.col-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
-.col-dot.essentielle {
+.col-badge.essentielle {
   background: #e8f5e9;
   color: #2e7d32;
 }
 
-.col-dot.privee {
+.col-badge.privee {
   background: #f3e5f5;
   color: #7b1fa2;
 }
 
 .gender-icon {
-  font-size: 0.75rem;
-  line-height: 1;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
 }
 
 .gender-icon.erkek {
