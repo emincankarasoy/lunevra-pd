@@ -542,25 +542,35 @@ body {
   }
 
   .perfume-table td {
-    padding: 2px 0;
+    padding: 4px 0;
     border-bottom: none;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    gap: 8px;
   }
 
-  .perfume-table td:nth-child(3) {
-    margin-top: 8px;
+  .perfume-table td::before {
+    content: attr(data-label);
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-secondary);
+    white-space: nowrap;
   }
 
   .perfume-table td:last-child {
+    display: block;
     margin-top: 10px;
+  }
+
+  .perfume-table td:last-child::before {
+    display: none;
   }
 
   .perfume-name {
     font-size: 0.95rem;
-  }
-
-  .similar-scent::before {
-    content: '↔ ';
-    color: var(--color-text-secondary);
   }
 
   .product-link {

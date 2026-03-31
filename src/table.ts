@@ -41,14 +41,14 @@ export function renderTable(perfumes: Perfume[], collection: Collection, page: n
       const displayName = collection === "privee" ? (p.priveeName ?? p.essentielleName) : p.essentielleName;
       return `
     <tr>
-      <td>
+      <td data-label="Lunévra Parfüm">
         <div class="perfume-name">${escapeHtml(displayName)}</div>
       </td>
-      <td>
+      <td data-label="Benzer Koku">
         <div class="similar-scent">${escapeHtml(p.similarTo)}</div>
         <div class="brand-name">${escapeHtml(p.similarBrand)}</div>
       </td>
-      <td>
+      <td data-label="Detay">
         <span class="perfume-tags">${collectionBadge(collection)}${GENDER_ICON[p.gender]}</span>
       </td>
       <td>
