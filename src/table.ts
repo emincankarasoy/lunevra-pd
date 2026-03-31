@@ -68,7 +68,7 @@ export function renderTable(perfumes: Perfume[], collection: Collection, page: n
         <thead>
           <tr>
             <th>Lunévra Parfüm</th>
-            <th>İlham Kaynağı</th>
+            <th>Benzer Koku</th>
             <th>Detay</th>
             <th></th>
           </tr>
