@@ -243,16 +243,22 @@ body {
 /* Column widths */
 .perfume-table th:nth-child(1),
 .perfume-table td:nth-child(1) {
-  width: 38%;
+  width: 32%;
 }
 
 .perfume-table th:nth-child(2),
 .perfume-table td:nth-child(2) {
-  width: 42%;
+  width: 36%;
 }
 
 .perfume-table th:nth-child(3),
 .perfume-table td:nth-child(3) {
+  width: 12%;
+  text-align: center;
+}
+
+.perfume-table th:nth-child(4),
+.perfume-table td:nth-child(4) {
   width: 20%;
   text-align: center;
 }

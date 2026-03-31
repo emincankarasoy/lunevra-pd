@@ -5,7 +5,7 @@ const ARROW_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
 const GENDER_ICON: Record<string, string> = {
   erkek: `<span class="gender-icon erkek" title="Erkek">♂</span>`,
   kadin: `<span class="gender-icon kadin" title="Kadın">♀</span>`,
-  unisex: `<span class="gender-icon unisex" title="Unisex">⚤</span>`,
+  unisex: `<span class="gender-icon unisex" title="Unisex">♂♀</span>`,
 };
 
 function escapeHtml(text: string): string {
@@ -42,14 +42,14 @@ export function renderTable(perfumes: Perfume[], collection: Collection, page: n
       return `
     <tr>
       <td>
-        <div class="perfume-name-row">
-          <span class="perfume-name">${escapeHtml(displayName)}</span>
-          <span class="perfume-tags">${collectionBadge(collection)}${GENDER_ICON[p.gender]}</span>
-        </div>
+        <div class="perfume-name">${escapeHtml(displayName)}</div>
       </td>
       <td>
         <div class="similar-scent">${escapeHtml(p.similarTo)}</div>
         <div class="brand-name">${escapeHtml(p.similarBrand)}</div>
+      </td>
+      <td>
+        <span class="perfume-tags">${collectionBadge(collection)}${GENDER_ICON[p.gender]}</span>
       </td>
       <td>
         <a class="product-link" href="${escapeHtml(p.productUrl)}" target="_top" rel="noopener">
@@ -69,6 +69,7 @@ export function renderTable(perfumes: Perfume[], collection: Collection, page: n
           <tr>
             <th>Lunévra Parfüm</th>
             <th>Benzer Koku</th>
+            <th></th>
             <th></th>
           </tr>
         </thead>
