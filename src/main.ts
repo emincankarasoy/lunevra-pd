@@ -149,7 +149,7 @@ function render() {
     currentPage = 1;
     render();
     const el = app.querySelector<HTMLInputElement>(".search-input")!;
-    el.focus();
+    el.focus({ preventScroll: true });
     el.setSelectionRange(el.value.length, el.value.length);
   });
 
@@ -160,7 +160,6 @@ function render() {
       if (page >= 1) {
         currentPage = page;
         render();
-        app.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
   });
