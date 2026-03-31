@@ -258,9 +258,61 @@ body {
 }
 
 /* Cell styles */
+.perfume-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .perfume-name {
   font-weight: 500;
   color: var(--color-text);
+}
+
+.perfume-tags {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.col-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 0.55rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.col-dot.essentielle {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.col-dot.privee {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.gender-icon {
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.gender-icon.erkek {
+  color: #1976d2;
+}
+
+.gender-icon.kadin {
+  color: #d81b60;
+}
+
+.gender-icon.unisex {
+  color: #7b1fa2;
 }
 
 .brand-name {

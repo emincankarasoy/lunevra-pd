@@ -2,10 +2,25 @@ import type { Perfume, Collection } from "./data";
 
 const ARROW_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>`;
 
+const GENDER_ICON: Record<string, string> = {
+  erkek: `<span class="gender-icon erkek" title="Erkek">♂</span>`,
+  kadin: `<span class="gender-icon kadin" title="Kadın">♀</span>`,
+  unisex: `<span class="gender-icon unisex" title="Unisex">⚤</span>`,
+};
+
 function escapeHtml(text: string): string {
   const el = document.createElement("span");
   el.textContent = text;
   return el.innerHTML;
+}
+
+function collectionBadges(p: Perfume): string {
+  const badges: string[] = [];
+  badges.push(`<span class="col-dot essentielle" title="Essentielle">E</span>`);
+  if (p.priveeName) {
+    badges.push(`<span class="col-dot privee" title="Privée">P</span>`);
+  }
+  return badges.join("");
 }
 
 export function renderTable(perfumes: Perfume[], collection: Collection, page: number, perPage: number): string {
@@ -30,7 +45,10 @@ export function renderTable(perfumes: Perfume[], collection: Collection, page: n
       return `
     <tr>
       <td>
-        <div class="perfume-name">${escapeHtml(displayName)}</div>
+        <div class="perfume-name-row">
+          <span class="perfume-name">${escapeHtml(displayName)}</span>
+          <span class="perfume-tags">${collectionBadges(p)}${GENDER_ICON[p.gender]}</span>
+        </div>
       </td>
       <td>
         <div class="similar-scent">${escapeHtml(p.similarTo)}</div>
