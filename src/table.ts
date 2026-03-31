@@ -3,9 +3,9 @@ import type { Perfume, Collection } from "./data";
 const ARROW_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>`;
 
 const GENDER_ICON: Record<string, string> = {
-  erkek: `<svg class="gender-icon erkek" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="5"/><path d="M19 5l-4.5 4.5M19 5h-5M19 5v5"/></svg>`,
-  kadin: `<svg class="gender-icon kadin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/></svg>`,
-  unisex: `<svg class="gender-icon unisex" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 7V2M15 3l-3 4-3-4M12 17v5M9 21l3-4 3 4"/></svg>`,
+  erkek: `<svg class="gender-icon erkek" viewBox="0 0 24 24" fill="currentColor"><path d="M9 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm3 7H6a1 1 0 0 0-1 1v5h2v8h4v-8h2v-5a1 1 0 0 0-1-1z"/></svg>`,
+  kadin: `<svg class="gender-icon kadin" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm4 9l-2.5-5h-5L6 11l1.8.9L9 9.5V15H7v2h3v5h2v-5h3v-2h-2V9.5l1.2 2.4L16 11z"/></svg>`,
+  unisex: `<svg class="gender-icon unisex" viewBox="0 0 40 24" fill="currentColor"><path d="M9 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm3 7H6a1 1 0 0 0-1 1v5h2v8h4v-8h2v-5a1 1 0 0 0-1-1z"/><path d="M28 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm4 9l-2.5-5h-5L22 11l1.8.9L25 9.5V15h-2v2h3v5h2v-5h3v-2h-2V9.5l1.2 2.4L32 11z"/></svg>`,
 };
 
 function escapeHtml(text: string): string {
