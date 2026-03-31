@@ -23,11 +23,6 @@ function render(query: string = "") {
     : "";
 
   app.innerHTML = `
-    <div class="header">
-      <h1 class="header__title">Koku Eşleştirme</h1>
-      <p class="header__subtitle">Sevdiğiniz parfümlerin Lunévra muadillerini keşfedin</p>
-    </div>
-
     <div class="search-container">
       ${SEARCH_ICON}
       <input
