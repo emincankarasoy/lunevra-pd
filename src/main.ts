@@ -48,10 +48,22 @@ function render() {
     )
     .join("");
 
+  const collectionInfo = tab.collection === "essentielle"
+    ? `<div class="collection-info">
+        <span class="collection-badge essentielle">Essentielle</span>
+        <p>Sevdiğiniz parfümlerin uygun fiyatlı muadilleri. Günlük kullanım için ideal.</p>
+      </div>`
+    : `<div class="collection-info">
+        <span class="collection-badge privee">Privée</span>
+        <p>Premium içeriklerle hazırlanan özel koleksiyon. Orijinaline en yakın deneyim.</p>
+      </div>`;
+
   app.innerHTML = `
     <div class="tabs">
       ${tabButtons}
     </div>
+
+    ${collectionInfo}
 
     <div class="search-container">
       ${SEARCH_ICON}
