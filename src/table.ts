@@ -42,7 +42,7 @@ export function renderTable(perfumes: Perfume[], collection: Collection, page: n
     .map((p) => {
       const displayName = collection === "privee" ? (p.priveeName ?? p.essentielleName) : p.essentielleName;
       const starBadge = p.featured ? STAR_ICON : "";
-      // const productUrl = collection === "privee" && p.priveeProductUrl ? p.priveeProductUrl : p.productUrl;
+      const productUrl = collection === "privee" && p.priveeProductUrl ? p.priveeProductUrl : p.productUrl;
       return `
     <tr${p.featured ? ' class="featured-row"' : ""}>
       <td data-label="Parf\u00fcm">
@@ -58,9 +58,9 @@ export function renderTable(perfumes: Perfume[], collection: Collection, page: n
         <span class="perfume-tags">${collectionBadge(collection)}${GENDER_ICON[p.gender]}</span>
       </td>
       <td>
-        <span class="product-link">
+        <a class="product-link" href="${escapeHtml(productUrl)}" target="_blank" rel="noopener noreferrer">
           İncele ${ARROW_ICON}
-        </span>
+        </a>
       </td>
     </tr>`;
     })
