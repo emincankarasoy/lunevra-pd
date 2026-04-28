@@ -58,7 +58,7 @@ export function renderTable(perfumes: Perfume[], collection: Collection, page: n
         <span class="perfume-tags">${collectionBadge(collection)}${GENDER_ICON[p.gender]}</span>
       </td>
       <td>
-        <span class="product-link disabled">
+        <span class="product-link">
           İncele ${ARROW_ICON}
         </span>
       </td>
